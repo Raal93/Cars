@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1>Pick the best car for you!</h1>
+      <h3>Cars in the store: <span id="howManyCars"></span></h3>
+      <select name="sorting" id="sort">
+        <option value="priceAsc">Sort by price from cheapest</option>
+        <option value="priceDesc">Sort by price from most expenive</option>
+        <option value="yearAsc">Sort by production year from oldest</option>
+        <option value="yearDesc">Sort by production year from newest</option>
+        <option value="milageAsc">Sort by milage from smallest</option>
+        <option value="milageDesc">Sort by milage from biggest</option>
+      </select>
+      <div class="search-container">
+        <h5>Tap car name or model to search:</h5>
+        <input type="text" id="search" />
+      </div>
+      <div class="cards-container" id="cards-container"></div>
+      <div class="adminPanel" id="adminPanel">
+        <h2>Admin panel - add new car</h2>
+        <div class="addCar" id="addCar">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" value="Fiat" /><br />
+          <label for="model">Model:</label>
+          <input type="text" name="model" id="model" value="126p" /><br />
+          <label for="productionYear">Production Year:</label>
+          <input type="number" name="productionYear" id="productionYear" value="1973" /><br />
+          <label for="mileage">Mileage:</label>
+          <input type="number" name="mileage" id="mileage" value="420000" /><br />
+          <label for="price">Price:</label>
+          <input type="number" name="price" id="price" value="60000" /><br />
+          <label for="inGarage">Is available:</label>
+          <select name="inGarage" id="inGarage">
+            <option value="true">In the garage</option>
+            <option value="false">Currently not available</option>
+          </select>
+        </div>
+        <button id="addNewCar" class="addBtn">Add car</button>
+      </div>
+      <div class="adminPanel">
+        <h2>Admin panel - add a new property to the car</h2>
+        <label for="newProperty">New property:</label>
+        <input type="text" maxlength="8" name="newProperty" id="newProperty" />
+        <button class="addBtn" id="addProperty">Add</button>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
